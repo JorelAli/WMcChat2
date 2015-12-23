@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <title>Chat Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <script>
+      document.getElementById("theChatBox").scrollTop = document.getElementById("theChatBox").scrollHeight
+    
+      function ChatController($scope) {
+        var socket = io.connect();
+
+        //$scope.messages = []
+        //$scope.roster = [];
+        //$scope.name = '';
+        //$scope.text = '';
+        $scope.uname = '';
+        $scope.pword = '';
+        $scope.serverip = '';
+        $scope.serverport = '';
+        $scope.msg = '';
+        $scope.chatbox = '';
+
+        // socket.on('connect', function () {
+        //   $scope.setName();
+        // });
+
+        // socket.on('message', function (msg) {
+        //   $scope.messages.push(msg);
+        //   $scope.$apply();
+        // });
+
+        // socket.on('roster', function (names) {
+        //   $scope.roster = names;
+        //   $scope.$apply();
+        // });
+        
+        socket.on('chatbox', function(msg) {
+          if(!$scope.chatbox) {
+            $scope.$apply(function() {$scope.chatbox = msg + "\n";});
+          } else {
+            $scope.$apply(function() {$scope.chatbox = $scope.chatbox + msg + "\n";});
+          }
+        });
+
+        $scope.chat = function chat() {
+          socket.emit('chat', $scope.msg);
+          $scope.msg = '';
+        };
+        
+        $scope.login = function login() {
+          //TODO: encrypt password
+          socket.emit('login', [ $scope.uname, $scope.pword, $scope.serverip, $scope.serverport ]);
+        };
+
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" ng-controller="ChatController">
+      <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="navbar-inner">
+          <div class="pull-right">
+            <a href="https://c9.io" class="brand">WMcChat2 (Probably a github link here or something)</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-header">
+        <h1>Minecraft for the web</h1>
+      </div>
+      <div class="row">
+        
+         <!-- Login -->
+          
+          <div class="row controls">
+            <form ng-submit="login()">
+              
+                <div class="control-group">
+                  <label class="control-label" for="inputEmail">Username</label>
+                  <div class="controls">
+                    <input type="text" class="input-block-level" ng-model="uname" placeholder="Username or email">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="inputPassword">Password</label>
+                  <div class="controls">
+                    <input type="password" class="input-block-level" ng-model="pword" placeholder="Password">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="inputPassword">Server information (Leave port blank for default port)</label>
+                  <div class="controls">
+                    <div class="input-append">
+                      <input type="text" class="input-block-level" ng-model="serverip" placeholder="Server IP">
+                      <input type="text" class="add-on" ng-model="serverport" placeholder = "Server port (25565)">
+                    </div>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <div class="controls">
+                    <label class="checkbox">
+                      <input type="checkbox"> Remember me
+                    </label>
+                    <input type="submit" class="span1 btn btn-primary" value="Log in">
+                  </div>
+                </div>
+              
+              <!-- Chat box goes here -->
+            <textarea class="form-control" rows="5" ng-model="chatbox" ng-bind="chatbox" id="theChatBox"></textarea>
+
+            </form>
+          </div>
+        
+        </br></br>
+        
+        <!-- Roster stuff thing
+        <div class="span4">
+          <ul class="nav nav-list well">
+            <li class="nav-header">Online Players</li>
+            <li ng-repeat="user in roster" ng-bind="user"></li>
+          </ul>
+        </div>
+        <div class="span9">
+        -->
+          
+          <!-- Messaging -->
+          <div class="row controls">
+            <form ng-submit="chat()">
+              <label class="control-label" for="inputPassword">Message to send to server</label>
+              <div class="input-append span7">
+                <input type="msg" class="span6" ng-model="msg" placeholder="Message">
+                <input type="submit" class="span1 btn btn-primary" value="Send" ng-disabled="!msg">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+  </body>
+</html>

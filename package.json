@@ -1,0 +1,14 @@
+{
+  "name": "WMcChat2",
+  "version": "0.3",
+  "description": "A web based Minecraft chat client",
+  "main": "server.js",
+  "repository": "",
+  "author": "Skepter <skepter.misc@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "socket.io": "~0.9.14"
+    "minecraft-protocol": "~0.16.5"
+  }
+}

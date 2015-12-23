@@ -1,0 +1,159 @@
+Your code is running at https://wmcchat2-skepter.c9users.io.
+Important: use process.env.PORT as the port and process.env.IP as the host in your scripts!
+
+Debugger listening on port 15454
+   info  - socket.io started
+Chat server listening at 0.0.0.0:8080
+   debug - served static content /socket.io.js
+   debug - client authorized
+   info  - handshake authorized UgiObmvA5lRVOeJCHUYY
+   debug - setting request GET /socket.io/1/xhr-polling/UgiObmvA5lRVOeJCHUYY?t=1450794894376
+   debug - setting poll timeout
+   debug - client authorized for 
+   debug - clearing poll timeout
+   debug - xhr-polling writing 1::
+   debug - set close timeout for client UgiObmvA5lRVOeJCHUYY
+   debug - xhr-polling received data packet 5:::{"name":"login","args":[["skepter.misc@gmail.com","McSkepter98","109.146.66.132",""]]}
+{"extra":[{"color":"white","text":"\u003c"},{"color":"aqua","text":"Skepter"},{"color":"white","text":"\u003e Hello, joined using WMcChat2 version 0.1"}],"text":""}
+{"extra":[{"color":"blue","text":"["},{"color":"aqua","text":"AllAssets"},{"color":"blue","text":"]"},{"color":"white","text":" 3 unique players have joined this server"}],"text":""}
+{"extra":[{"color":"blue","text":"["},{"color":"aqua","text":"AllAssets"},{"color":"blue","text":"]"},{"color":"white","text":" Total time played: 50 minutes 4 seconds "}],"text":""}
+{"extra":["Unknown command. Type \"/help\" for help."],"text":""}
+{"extra":["Vault 15.6 is out! You are running 15.5"],"text":""}
+{"extra":["Update Vault at: ",{"clickEvent":{"action":"open_url","value":"http://dev.bukkit.org/server-mods/vault"},"text":"http://dev.bukkit.org/server-mods/vault"}],"text":""}
+{"extra":[{"color":"yellow","text":"Skepter joined the game"}],"text":""}
+   debug - client authorized
+   info  - handshake authorized mqCxtrH5SQlzPtOPHUYZ
+   debug - setting request GET /socket.io/1/xhr-polling/mqCxtrH5SQlzPtOPHUYZ?t=1450794905786
+   debug - setting poll timeout
+   debug - client authorized for 
+   debug - clearing poll timeout
+   debug - xhr-polling writing 1::
+   debug - set close timeout for client mqCxtrH5SQlzPtOPHUYZ
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["hello"]}
+{"extra":[{"color":"white","text":"\u003c"},{"color":"aqua","text":"Skepter"},{"color":"white","text":"\u003e hello"}],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Hi guys :D"]}
+{"extra":[{"color":"white","text":"\u003c"},{"color":"aqua","text":"Skepter"},{"color":"white","text":"\u003e Hi guys :D"}],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["This works"]}
+{"extra":[{"color":"white","text":"\u003c"},{"color":"aqua","text":"Skepter"},{"color":"white","text":"\u003e This works"}],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Awesome :D"]}
+{"extra":[{"color":"white","text":"\u003c"},{"color":"aqua","text":"Skepter"},{"color":"white","text":"\u003e Awesome :D"}],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["/kick Skepter"]}
+"Kicked by an operator."
+Connection lost
+   debug - xhr-polling received data packet 5:::{"name":"login","args":[["skepter.misc@gmail.com","McSkepter98","mc.medmania.co.u",""]]}
+Error occured
+Connection lost
+   debug - fired close timeout for client UgiObmvA5lRVOeJCHUYY
+   info  - transport end (close timeout)
+   debug - discarding transport
+   debug - fired close timeout for client mqCxtrH5SQlzPtOPHUYZ
+   info  - transport end (close timeout)
+   debug - discarding transport
+   debug - client authorized
+   info  - handshake authorized 18X5xrnJN1M-wNzUHUYa
+   debug - setting request GET /socket.io/1/xhr-polling/18X5xrnJN1M-wNzUHUYa?t=1450794966620
+   debug - setting poll timeout
+   debug - client authorized for 
+   debug - clearing poll timeout
+   debug - xhr-polling writing 1::
+   debug - set close timeout for client 18X5xrnJN1M-wNzUHUYa
+   debug - xhr-polling received data packet 5:::{"name":"login","args":[["skepter.misc@gmail.com","McSkepter98","mc.medmania.co.uk",""]]}
+Error occured
+   debug - xhr-polling received data packet 5:::{"name":"login","args":[["skepter.misc@gmail.com","McSkepter98","mc.medmania.co.uk",""]]}
+Error occured
+   debug - xhr-polling received data packet 5:::{"name":"login","args":[["skepter.misc@gmail.com","McSkepter98","mc.medmania.co.uk",""]]}
+{"extra":[{"color":"gold","text":"[mcMMO] Running version "},{"color":"dark_aqua","text":"1.5.02-b35"}],"text":""}
+{"extra":[{"color":"gold","text":"[mcMMO] "},{"color":"green","clickEvent":{"action":"open_url","value":"http://dev.bukkit.org/server-mods/mcmmo/"},"text":"http://dev.bukkit.org/server-mods/mcmmo/"},{"color":"yellow","text":" - mcMMO Website"}],"text":""}
+{"extra":[{"color":"yellow","text":"Skepter joined the game"}],"text":""}
+{"extra":[{"color":"red","text":"Welcome, "},{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},{"color":"red","text":"! To MedMania Reborn."}],"text":""}
+""
+{"extra":["----------------------------------------------------"],"text":""}
+""
+{"extra":[{"color":"white","text":"Type "},{"color":"red","text":"/help"},{"color":"white","text":" for a list of commands."}],"text":""}
+""
+{"extra":["----------------------------------------------------"],"text":""}
+""
+{"extra":[{"color":"white","text":"Type "},{"color":"red","text":"/rules"},{"color":"white","text":" for all the server rules."}],"text":""}
+""
+{"extra":["----------------------------------------------------"],"text":""}
+""
+{"extra":[{"color":"white","text":"Please remember, This is no longer a "},{"color":"dark_red","text":"RAID server so no griefing. Ask a staff member to protect your areas."}],"text":""}
+""
+{"extra":["----------------------------------------------------"],"text":""}
+""
+{"extra":[{"color":"gold","text":"You have no new mail."}],"text":""}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": Hello, joined using WMcChat2 version 0.1"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": hihi"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": :o"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": SKEP"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Hello :)"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": Hello :)"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": IT WORKSSSSSSSSSSSSSSSSS"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"yellow","text":"Cape"},": smack that all on the floor smack that give me more"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": O MAI LORD"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["I can barely read what you're saying"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": I can barely read what you\u0027re saying"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["I can barely read what you're saying"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": I can barely read what you\u0027re saying"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": xD"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": o"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Because of all of the colours"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": Because of all of the colours"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["But it works :D"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": But it works :D"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": should fix that xD"],"text":""}
+   debug - fired close timeout for client 18X5xrnJN1M-wNzUHUYa
+   info  - transport end (close timeout)
+   debug - discarding transport
+   debug - client authorized
+   info  - handshake authorized qPz6VxaY4VO3WX00HUYb
+   debug - setting request GET /socket.io/1/xhr-polling/qPz6VxaY4VO3WX00HUYb?t=1450795027457
+   debug - setting poll timeout
+   debug - client authorized for 
+   debug - clearing poll timeout
+   debug - xhr-polling writing 1::
+   debug - set close timeout for client qPz6VxaY4VO3WX00HUYb
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Now I realized that I haven't got a disconnect button"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": Now I realized that I haven\u0027t got a disconnect button"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["erm. yeah -.-"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": erm. yeah -.-"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": haha lol"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": RIP"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"yellow","text":"Cape"},": I\u0027m so fancy"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": whats that"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": is it new or something"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": did poke make it?"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["That ' looks like a \\u0027 to me"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": That \u0027 looks like a \\u0027 to me"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"yellow","text":"Cape"},": no"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["So I can barely read anything"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": So I can barely read anything"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": no skep made that"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": oh"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": so coolll"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":[":)"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": :)"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": nice :D"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": skep makes alot of things xD"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["It's still a work in progress. I cant"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": It\u0027s still a work in progress. I cant"],"text":""}
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"dark_red","text":"P"},{"color":"dark_blue","text":"e"},{"color":"dark_red","text":"n"},{"color":"dark_blue","text":"t"},{"color":"dark_red","text":"a"},": that a college project?"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["view the list of current users yet"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": view the list of current users yet"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["(online users)"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": (online users)"],"text":""}
+   debug - fired close timeout for client qPz6VxaY4VO3WX00HUYb
+   info  - transport end (close timeout)
+   debug - discarding transport
+   debug - client authorized
+   info  - handshake authorized aUPE4e8Y9AiGEyXVHUYc
+   debug - setting request GET /socket.io/1/xhr-polling/aUPE4e8Y9AiGEyXVHUYc?t=1450795088223
+   debug - setting poll timeout
+   debug - client authorized for 
+   debug - clearing poll timeout
+   debug - xhr-polling writing 1::
+   debug - set close timeout for client aUPE4e8Y9AiGEyXVHUYc
+{"extra":[{"color":"white","text":"[Iron]"},{"color":"yellow","text":"Cape"},": Apple bottom jeans boots with the fur"],"text":""}
+   debug - xhr-polling received data packet 5:::{"name":"chat","args":["Well, I'ma gonna rejoin in chat mc so I can read stuff properly xD"]}
+{"extra":[{"color":"gold","text":"[Gold]"},{"color":"dark_blue","text":"S"},{"color":"blue","text":"k"},{"color":"aqua","text":"e"},{"color":"white","text":"p"},{"color":"aqua","text":"t"},{"color":"blue","text":"e"},{"color":"dark_blue","text":"r"},": Well, I\u0027ma gonna rejoin in chat mc so I can read stuff properly xD"],"text":""}
+{"extra":[{"color":"blue","text":"[TrialMod]"},{"color":"light_purple","text":"Y"},{"color":"green","text":"u"},{"color":"light_purple","text":"j"},{"color":"green","text":"i"},{"color":"light_purple","text":"nP"},{"color":"green","text":"o"},{"color":"light_purple","text":"k"},{"color":"green","text":"e"},": he made the silk chest plugin also :3"],"text":""}
