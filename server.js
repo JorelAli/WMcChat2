@@ -17,6 +17,7 @@ var mc = require('minecraft-protocol');
 var router = express();
 var server = http.createServer(router);
 var io = socketio.listen(server);
+var ip = '127.0.0.1';
 
 router.use(express.static(path.resolve(__dirname, 'client')));
 
@@ -100,7 +101,7 @@ io.on('connection', function (socket) {
 // }
 
 // Server listens for new people
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+server.listen(process.env.PORT || 3000, process.env.IP || ip, function(){
   var addr = server.address();
   console.log("Chat server listening at", addr.address + ":" + addr.port);
 });

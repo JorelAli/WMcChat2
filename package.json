@@ -1,14 +1,24 @@
 {
-  "name": "WMcChat2",
-  "version": "0.3",
+  "name": "wmcchat2",
+  "version": "1.0.0",
   "description": "A web based Minecraft chat client",
   "main": "server.js",
-  "repository": "",
-  "author": "Skepter <skepter.misc@gmail.com>",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14",
-    "minecraft-protocol": "~0.16.5"
-  }
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skepter/WMcChat2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skepter/WMcChat2/issues"
+  },
+  "homepage": "https://github.com/Skepter/WMcChat2#readme"
 }
