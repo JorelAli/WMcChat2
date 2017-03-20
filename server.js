@@ -48,11 +48,32 @@ io.on('connection', function (socket) {
     socket.on('disconnect', function () {
       sockets.splice(sockets.indexOf(socket), 1);
     });
+
+    function retrieveServerVersion(server, port, callback) {
+        var sVersion = null;
+        mc.ping({
+            host: server,
+            port: port
+        }, function(err, pingResults) {
+            console.log(pingResults.version.name);
+            sVersion = pingResults.version.name;
+            sVersion = sVersion.replace(/\D+\s/g, "");
+            console.log("Found version " + sVersion + " running on the server");
+            callback(sVersion);
+        });
+}
     
     // When a person logs in using the login form
     socket.on('login', function(data) {
-      loginToMinecraft(data[0], data[1], data[2], data[3], socket);
+
+      retrieveServerVersion(data[2], data[3], function(result) {
+        serverVersion = result;
+        console.log("Callback result: " + result);
+        loginToMinecraft(data[0], data[1], data[2], data[3], socket);
+      })
     }); 
+
+
     
     // When a person sends a message using the message form
     socket.on('chat', function(msg) {
@@ -114,13 +135,7 @@ function loginToMinecraft(username, password, serverip, port, socket) {
   if(!port)
     port = 25565;
   
-    mc.ping({
-      host: serverip,
-      port: port
-    }, function(err, pingResults) {
-      console.log(pingResults.version.name);
-      serverVersion = getVersion(pingResults.version.name);
-    })
+   
     
 
 console.log("Loading into server version: " + serverVersion);
@@ -242,8 +257,4 @@ function decodeString(string) {
       return String.fromCharCode(parseInt(grp, 16)); } );
   string = unescape(string);
   return string;
-}
-
-function getVersion(string) {
-  return string.match("[\d.*]");
 }
