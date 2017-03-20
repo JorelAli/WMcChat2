@@ -114,13 +114,24 @@ function loginToMinecraft(username, password, serverip, port, socket) {
   if(!port)
     port = 25565;
   
+    mc.ping({
+      host: serverip,
+      port: port
+    }, function(err, pingResults) {
+      console.log(pingResults.version.name);
+      serverVersion = getVersion(pingResults.version.name);
+    })
+    
+
+console.log("Loading into server version: " + serverVersion);
+
   // Log the user into Minecraft using minecraft-protocol
   var client = mc.createClient({
     host: serverip,
     port: port,
     username: username,
     password: password,
-    version: "1.11.2"
+    version: serverVersion
   });
   
   /* Information from server_info packet
@@ -231,4 +242,8 @@ function decodeString(string) {
       return String.fromCharCode(parseInt(grp, 16)); } );
   string = unescape(string);
   return string;
+}
+
+function getVersion(string) {
+  return string.match("[\d.*]");
 }
