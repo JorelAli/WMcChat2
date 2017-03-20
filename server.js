@@ -18,6 +18,7 @@ var router = express();
 var server = http.createServer(router);
 var io = socketio.listen(server);
 var ip = '127.0.0.1';
+var serverVersion = "1.11.2";
 
 router.use(express.static(path.resolve(__dirname, 'client')));
 
@@ -119,6 +120,7 @@ function loginToMinecraft(username, password, serverip, port, socket) {
     port: port,
     username: username,
     password: password,
+    version: "1.11.2"
   });
   
   /* Information from server_info packet
