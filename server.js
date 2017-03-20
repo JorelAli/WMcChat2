@@ -49,13 +49,19 @@ io.on('connection', function (socket) {
       sockets.splice(sockets.indexOf(socket), 1);
     });
 
+    //Gets the server version using a callback due to the delay in ping
     function retrieveServerVersion(server, port, callback) {
         var sVersion = null;
         mc.ping({
             host: server,
             port: port
         }, function(err, pingResults) {
-            console.log(pingResults.version.name);
+          if(err) {
+            //Error: connect ECONNREFUSED 127.0.0.1:25565 
+            //IMPLIES SERVER IS OFFLINE
+            console.log("Found an error pinging: " + err);
+            return;
+          }
             sVersion = pingResults.version.name;
             sVersion = sVersion.replace(/\D+\s/g, "");
             console.log("Found version " + sVersion + " running on the server");
@@ -68,7 +74,6 @@ io.on('connection', function (socket) {
 
       retrieveServerVersion(data[2], data[3], function(result) {
         serverVersion = result;
-        console.log("Callback result: " + result);
         loginToMinecraft(data[0], data[1], data[2], data[3], socket);
       })
     }); 
@@ -134,11 +139,8 @@ function loginToMinecraft(username, password, serverip, port, socket) {
   // Set default port
   if(!port)
     port = 25565;
-  
-   
-    
 
-console.log("Loading into server version: " + serverVersion);
+  console.log("Logging into server version: " + serverVersion);
 
   // Log the user into Minecraft using minecraft-protocol
   var client = mc.createClient({
@@ -148,13 +150,6 @@ console.log("Loading into server version: " + serverVersion);
     password: password,
     version: serverVersion
   });
-  
-  /* Information from server_info packet
-  { "description":"A Minecraft Server",
-    "players":{"max":2147483647,"online":0},
-    "version":{"name":"CraftBukkit 1.8.8","protocol":47}
-  }
-  */
 
   // When the client receives a chat message
   client.on('chat', function(packet) {
@@ -217,7 +212,7 @@ console.log("Loading into server version: " + serverVersion);
   // When the client logs in
   client.on('login', function(packet) {
     chat(socket, "/spawn");
-    chat(socket, "Hello everyone, I've joined using WMcChat2 version " + WEBSERVER_VERSION);
+    chat(socket, "Hello everyone, I've joined using Skepter's WMcChat2 version " + WEBSERVER_VERSION);
   }); 
   
   // When the client is disconnected (e.g. kicked from the server)
@@ -229,7 +224,7 @@ console.log("Loading into server version: " + serverVersion);
   // When the client shuts down (e.g. server closes, or other unknown issue)
   client.on('end', function() {
     socket.emit('chatbox', "Connection lost");
-     console.log("Connection lost: Unknown cause");
+     console.log("Connection lost: Disconnected from server");
   });
   
   // When there is a confusing error (e.g. server closes)
@@ -242,11 +237,24 @@ console.log("Loading into server version: " + serverVersion);
   clients.push({socket: socket, client: client});
 }
 
+function disconnectFromServer(socket) {
+  clients.forEach(function (clientData) {
+    if(clientData.socket == socket)
+      clientData.client.end("Disconnected from server peacefully :)");  
+  });
+}
+
 // When a person needs to chat
 function chat(socket, msg) {
   clients.forEach(function (clientData) {
-    if(clientData.socket == socket)
+    if(clientData.socket == socket) {
+      if(msg == "/disconnect") {
+        disconnectFromServer(socket);
+        return;
+      }
+      //client.write writes a packet to the minecraft server
       clientData.client.write('chat', {message: msg});
+    }
   });
 }
 

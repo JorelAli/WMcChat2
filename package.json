@@ -1,6 +1,6 @@
 {
   "name": "wmcchat2",
-  "version": "1.0.0",
+  "version": "0.4.0",
   "description": "A web based Minecraft chat client",
   "main": "server.js",
   "dependencies": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/Skepter/WMcChat2.git"
   },
-  "author": "",
+  "author": "Skepter",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Skepter/WMcChat2/issues"
