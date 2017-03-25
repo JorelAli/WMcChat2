@@ -88,50 +88,59 @@
 
             <!-- Login -->
 
-            <div class="row controls">
-                <form ng-submit="login()">
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail">Username</label>
-                        <div class="controls">
-                            <input type="text" class="input-block-level" ng-model="uname" placeholder="Username or email">
-                        </div>
+            <div class="panel panel-default row controls">
+								<div class="panel-heading">Login to server</div>
+								<div class="panel-body">
+										<form ng-submit="login()">
+												<div class="control-group">
+														<label class="control-label" for="inputEmail">Username</label>
+														<div class="controls">
+																<input type="text" class="form-control" ng-model="uname" placeholder="Username or email">
+														</div>
 
-                        <label class="control-label" for="inputPassword">Password</label>
-                        <div class="controls">
-                            <input type="password" class="input-block-level" ng-model="pword" placeholder="Password">
-                        </div>
+														<label class="control-label" for="inputPassword">Password</label>
+														<div class="controls">
+																<input type="password" class="form-control" ng-model="pword" placeholder="Password">
+														</div>
 
-                        <label class="control-label" for="serverInfo">Server information (Leave port blank for default port)</label>
-                        <div class="controls">
-                            <div class="input-append">
-                                <input type="text" class="input-block-level" ng-model="serverip" placeholder="Server IP">
-                                <input type="text" class="add-on" ng-model="serverport" placeholder="Server port (25565)">
-                            </div>
-                        </div>
+														<label class="control-label" for="serverInfo">Server information (Leave port blank for default port)</label>
+														<div class="controls">
+																<div class="input-group">
+																		<input type="text" class="form-control" ng-model="serverip" placeholder="Server IP">
+																		<span class="input-group-addon">
+																				<input type="text" ng-model="serverport" placeholder="Server port (25565)">
+																		</span>
+																</div>
+														</div>
 
-                        <div class="controls">
-                            <label class="checkbox">
-											<input type="checkbox"> Remember me
-											</label>
-                            <input type="submit" class="btn btn-primary" value="Log in">
-                        </div>
-                    </div>
-                </form>
-								<form ng-submit="leave()">
-									<input type="submit" class="btn btn-danger" value="Disconnect">
-								</form>
+														<div class="controls">
+																<input type="checkbox"> Remember me
+																<br><br>
+																<input type="submit" class="btn btn-primary" value="Log in">
+																<form ng-submit="leave()">
+																		<input type="submit" class="btn btn-danger" value="Disconnect">
+																</form>
+														</div>
+												</div>
+										</form>
+								</div>
+								</div>
+
+								<br>
                 <!--Text box -->
-                <textarea class="input-block-level" rows="10" ng-model="chatbox" ng-bind="chatbox" id="theChatBox"></textarea>
+                <textarea class="form-control" rows="10" ng-model="chatbox" ng-bind="chatbox" id="theChatBox"></textarea>
 								<form ng-submit="chat()">
 										<div class="control-group">
 												<label class="control-label" for="inputPassword">Message to send to server</label>
-												<div class="input-append">
-														<input type="text" class="input-block-level" ng-model="msg" placeholder="Chat">
-														<input type="submit" class="btn btn-primary" value="Send" ng-disabled="!msg">
+												<div class="input-group">
+														<input type="text" class="form-control" ng-model="msg" placeholder="Chat">
+														<span class="input-group-btn">
+																<input type="submit" class="btn btn-primary" value="Send" ng-disabled="!msg">
+														</span>
 												</div>
 										</div>
 								</form>
-            </div>
+            
 
 
 
