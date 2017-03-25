@@ -78,6 +78,13 @@ io.on('connection', function (socket) {
       })
     }); 
 
+    socket.on('leave', function(data) {
+      clients.forEach(function (clientData) {
+        if(clientData.socket == socket)
+          clientData.client.end("Disconnected from server peacefully :)");  
+        });
+    }); 
+
 
     
     // When a person sends a message using the message form

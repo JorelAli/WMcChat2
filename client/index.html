@@ -64,6 +64,10 @@
                 socket.emit('login', [$scope.uname, $scope.pword, $scope.serverip, $scope.serverport]);
             };
 
+						$scope.leave = function leave() {
+                socket.emit('leave');
+            };
+
         }
     </script>
 </head>
@@ -86,7 +90,6 @@
 
             <div class="row controls">
                 <form ng-submit="login()">
-
                     <div class="control-group">
                         <label class="control-label" for="inputEmail">Username</label>
                         <div class="controls">
@@ -109,27 +112,25 @@
                         <div class="controls">
                             <label class="checkbox">
 											<input type="checkbox"> Remember me
-										</label>
+											</label>
                             <input type="submit" class="btn btn-primary" value="Log in">
                         </div>
                     </div>
                 </form>
-
+								<form ng-submit="leave()">
+									<input type="submit" class="btn btn-danger" value="Disconnect">
+								</form>
                 <!--Text box -->
                 <textarea class="input-block-level" rows="10" ng-model="chatbox" ng-bind="chatbox" id="theChatBox"></textarea>
-                </br>
-                <div class="row controls">
-                    <form ng-submit="chat()">
-                        <div class="control-group">
-                            <label class="control-label" for="inputPassword">Message to send to server</label>
-                            <div class="input-append">
-                                <input type="msg" ng-model="msg" placeholder="Message">
-                                <input type="submit" class="btn btn-primary" value="Send" ng-disabled="!msg">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
+								<form ng-submit="chat()">
+										<div class="control-group">
+												<label class="control-label" for="inputPassword">Message to send to server</label>
+												<div class="input-append">
+														<input type="text" class="input-block-level" ng-model="msg" placeholder="Chat">
+														<input type="submit" class="btn btn-primary" value="Send" ng-disabled="!msg">
+												</div>
+										</div>
+								</form>
             </div>
 
 
