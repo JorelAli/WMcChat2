@@ -28,12 +28,12 @@
         </nav>
 
         <div class="page-header">
-            <h1>Login to your Minecraft account</h1>
+            <h1>Log in to your Minecraft account</h1>
         </div>
         <div class="row">
 
             <div class="panel panel-primary row controls">
-                <div class="panel-heading">Login to server</div>
+                <div class="panel-heading">Log into Minecraft</div>
                 <div class="panel-body">
                     <form action="http://127.0.0.1:3000/chat" method="post">
                         <div class="control-group">
@@ -41,20 +41,16 @@
                             <div class="controls">
                                 <input type="text" name="uname" class="form-control" placeholder="Username or email">
                             </div>
-
+                            <br>
                             <label class="control-label" for="inputPassword">Password</label>
                             <div class="controls">
                                 <input type="password" name="pword" class="form-control" placeholder="Password">
                             </div>
-
-                            <label class="control-label" for="serverInfo">Server information (Leave port blank for default port)</label>
+                            <br>
                             <div class="controls">
-                                <div class="input-group">
-                                    <input type="text" name="servip" class="form-control" placeholder="Server IP">
-                                    <span class="input-group-addon">
-										<input type="text" name="port" placeholder="Server port (25565)">
-									</span>
-                                </div>
+                                <input type="checkbox"> Remember me
+                                    <br><br>
+                                <input type="submit" class="btn btn-primary" value="Log in">
                             </div>
                         </div>
                     </form>
