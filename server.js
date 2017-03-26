@@ -9,6 +9,7 @@ var http = require('http');
 var path = require('path');
 var socketio = require('socket.io');
 var express = require('express');
+var bodyParser = require('body-parser');
 
 /* Minecraft imports */
 var mc = require('minecraft-protocol');
@@ -21,6 +22,19 @@ var ip = '127.0.0.1';
 var serverVersion = "1.11.2";
 
 router.use(express.static(path.resolve(__dirname, 'client')));
+
+/** bodyParser.urlencoded(options)
+ * Parses the text as URL encoded data (which is how browsers tend to send form data from regular forms set to POST)
+ * and exposes the resulting object (containing the keys and values) on req.body
+ */
+router.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+/**bodyParser.json(options)
+ * Parses the text as JSON and exposes the resulting object on req.body.
+ */
+router.use(bodyParser.json());
 
 //These are the people connected to the webserver
 /* This is actually completely useless and just uses up memory.
@@ -153,8 +167,10 @@ router.get('/myaction', function(req, res) {
 });
 
 router.post('/chat', function(req, res) {
-  console.log(req.query.uname)
-  res.send('You sent the name "' + req.query.uname + '".');
+  console.log(req)
+  console.log("Username: " + req.body.uname)
+  console.log("Pass: " + req.body.pword)
+  res.send('Username: "' + req.body.uname + '"');
 });
 
 // Logs the player into Minecraft
