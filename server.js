@@ -140,6 +140,18 @@ server.listen(process.env.PORT || 3000, process.env.IP || ip, function(){
   console.log("Chat server listening at", addr.address + ":" + addr.port);
 });
 
+//http://stackoverflow.com/questions/15568851/node-js-how-to-send-data-from-html-to-express
+
+// router.post('/myaction', function(req, res) {
+//   console.log(req)
+//   res.send('You sent the name "' + req.query.uname + '".');
+// });
+
+router.get('/myaction', function(req, res) {
+  console.log(req)
+  res.send('You sent the name "' + req.query.uname + '".');
+});
+
 // Logs the player into Minecraft
 function loginToMinecraft(username, password, serverip, port, socket) {
   
