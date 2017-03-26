@@ -152,6 +152,11 @@ router.get('/myaction', function(req, res) {
   res.send('You sent the name "' + req.query.uname + '".');
 });
 
+router.post('/chat', function(req, res) {
+  console.log(req.query.uname)
+  res.send('You sent the name "' + req.query.uname + '".');
+});
+
 // Logs the player into Minecraft
 function loginToMinecraft(username, password, serverip, port, socket) {
   
