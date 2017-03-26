@@ -149,7 +149,7 @@ server.listen(process.env.PORT || 3000, process.env.IP || ip, function(){
 
 router.get('/myaction', function(req, res) {
   console.log(req)
-  res.send('You sent the name "' + req.query.uname + '".');
+  res.send('You sent the name "' + req.query.text1 + '".');
 });
 
 router.post('/chat', function(req, res) {
