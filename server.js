@@ -170,7 +170,10 @@ router.post('/chat', function(req, res) {
   console.log(req)
   console.log("Username: " + req.body.uname)
   console.log("Pass: " + req.body.pword)
-  res.send('Username: "' + req.body.uname + '"');
+  res.redirect("/chat.html")
+  //See: http://stackoverflow.com/a/13336055/4779071
+  //https://expressjs.com/en/api.html#middleware-callback-function-examples
+  //res.send('Username: "' + req.body.uname + '"');
 });
 
 // Logs the player into Minecraft
